@@ -264,8 +264,9 @@
 
         }
         setData();
+        const rem = (window.outerHeight*0.027);
         document.getElementById("bars").innerHTML="";
-        for(let i = 0;i<Math.floor(document.getElementsByClassName("poster")[0].getBoundingClientRect().width/100);i++){
+        for(let i = 0;i<Math.floor((document.getElementsByClassName("poster")[0].getBoundingClientRect().width/rem)/2);i++){
             document.getElementById("bars").innerHTML+="<div class=\"bar\"></div>";
             document.getElementById("bars").lastChild.style.height=Math.random()*1+0.4+"rem";
         }
@@ -277,14 +278,13 @@
         },750);
         window.addEventListener("resize",()=>{
             document.getElementById("bars").innerHTML="";
-            for(let i = 0;i<Math.floor(document.getElementsByClassName("poster")[0].getBoundingClientRect().width/100);i++){
+            for(let i = 0;i<Math.floor((document.getElementsByClassName("poster")[0].getBoundingClientRect().width/rem)/2);i++){
                 document.getElementById("bars").innerHTML+="<div class=\"bar\"></div>";
                 document.getElementById("bars").lastChild.style.height=Math.random()*1+0.4+"rem";
             }
         });
         const songs = document.getElementsByClassName("songs")[0];
         const tileAmount = Math.ceil(document.getElementsByClassName("songs")[0].children.length/2);
-        const rem = (window.outerHeight*0.027);
         const tileHeight = (songs.getBoundingClientRect().height-(1.2*rem))/tileAmount;
         console.log(tileHeight ,tileAmount);
         let maxLength = 0;
