@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            font-size: 3vh;
+            --mainBackground: #F1EDE2;
+            --posterPadding: 2rem;
+            --albumNameSize: 0.75rem;
+            --imageSrc: url("moje.png"); 
+            --fontColor: #000000;
+        }
+        *{
+            color: var(--fontColor);
+        }
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .poster{
+            display: flex;
+            flex-direction: column;
+            width: calc(71vh - calc(var(--posterPadding) * 2));
+            height: calc(100vh - calc(var(--posterPadding) * 2));
+            background: url("noisetest.png"),var(--mainBackground);
+            padding-block: calc(var(--posterPadding) * 1);
+            padding-inline: calc(var(--posterPadding) * 1);
+            align-items: center;
+        }
+        #image{
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: var(--imageSrc);
+            background-size: 100%;
+            background-clip: content-box;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 0.5rem;
+        }
+        .twosided{
+            display: flex;
+            width: 100%;
+            position: relative;
+            align-items: center;
+        }
+        .albumName{
+            max-width: 45%;
+            letter-spacing: 0.03rem;
+            font-weight: 800;
+            font-size: var(--albumNameSize);
+            line-height: calc(var(--albumNameSize) - 0.1rem);
+            font-family: 'Poppins';
+        }
+        .spotify{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 45%;
+            height: 100%;
+            position: absolute;
+            left: 55%;
+            gap:3%
+        }
+        .spotifyLogo{
+            height: 80%;
+            aspect-ratio: 1/1;
+            background: url("spotify.svg");
+            background-size: 100%;
+        }
+        .spotifyWaves{
+            height: 100%;
+        }
+        #bars{
+            flex:1;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            gap:0.075rem;
+        }
+        .bar{
+            width: 0.25rem;
+            background: var(--fontColor);
+            border-radius: 0.2rem;
+            transition-duration:750ms;
+        }
+        .artist{
+            width: 100%;
+            letter-spacing: 0.015rem;
+            font-weight: 300;
+            font-size: calc(0.75rem * (2.5/3));
+            line-height: calc(0.75rem - 0.1rem);
+            font-family: 'Poppins';
+            margin-bottom: 0.1rem;
+        }
+        .progressBar{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            width: 92%;
+            margin-bottom: 0.15rem;
+        }
+        .side{
+            width: 50%;
+            background: var(--fontColor);
+            height: 0.15rem;
+            border-radius: 0.1rem;
+        }
+        .smaller{
+            height: 0.10rem;
+        }
+        .dott{
+            position: absolute;
+            height: 0.35rem;
+            width: 0.35rem;
+            border-radius:50%;
+            background: var(--fontColor);
+        }
+        .controls{
+            display: flex;
+            align-items: center;
+            gap:0.2rem;
+        }
+        .prev{
+            height: 2rem;
+            width: 2rem;
+            background: url("backward.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .pause{
+            height: 2.75rem;
+            width: 2.75rem;
+            background: url("pause.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .next{
+            height: 2rem;
+            width: 2rem;
+            background: url("forward.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .songs{
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            font-weight: 400;
+            font-family: system-ui;
+            letter-spacing: 0.01rem;
+            width: 100%;
+            margin-top: -0.6rem;
+            margin-bottom: 0.2rem;
+            height: 5.3rem;
+        }
+        .songs > div{
+            display: flex;
+            align-items: center;
+        }
+        .bottomInfo{
+            height: 0.6rem;
+            font-size: 0.45rem;
+            font-weight: 600;
+            font-family: 'Poppins';
+        }
+        .release{
+            width: 50%;
+            text-align: center;
+        }
+        .length{
+            width: 50%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div id="image"></div>
+        <div class="twosided">
+            <div class="albumName"></div>
+            <div class="spotify">
+                <div class="spotifyLogo"></div>
+                <div class="spotifyWaves">
+                    <div id="bars"></div>
+                </div>
+            </div>
+        </div>
+        <div class="artist"><i></i></div>
+        <div class="progressBar">
+            <div class="side"></div>
+            <div class="side smaller"></div>
+            <div class="dott"></div>
+        </div>
+        <div class="controls">
+            <div class="prev"></div>
+            <div class="pause"></div>
+            <div class="next"></div>
+        </div>
+        <div class="songs">
+        </div>
+        <div class="twosided bottomInfo">
+            <div class="release"><b>RELEASE DATE: </b><b></b></div>
+            <div class="length"><b>LENGTH: </b><b></b></div>
+        </div>
+    </div>
+    <script defer>
+        function setData(){
+            let albumTitle = sessionStorage.getItem("title");
+            let artist = sessionStorage.getItem("artist");
+            let releaseDate = sessionStorage.getItem("releaseDate");
+            let length = sessionStorage.getItem("length");
+            let songList = sessionStorage.getItem("songList");
+
+            if(albumTitle!=null){
+                albumTitle = albumTitle.toUpperCase();
+            }
+            if(artist!=null){
+                artist = artist.toUpperCase();
+            }
+            if(releaseDate!=null){
+                releaseDate = releaseDate.toUpperCase();
+            }
+            if(length!=null){
+                length = length.toUpperCase();
+            }
+            document.getElementsByClassName("songs")[0].innerHTML="";
+            if(songList != null){
+                songList = JSON.parse(songList);
+                let x = 0;
+                let y = Math.ceil(songList.length/2)-1;
+                for(let i = 0;i<songList.length;i++){
+                    if(i % 2 === 0){
+                        document.getElementsByClassName("songs")[0].innerHTML+=`<div>${songList[i+x].toUpperCase()}</div>`;
+                        x-=1;
+                    }
+                    else{
+                        document.getElementsByClassName("songs")[0].innerHTML+=`<div>${songList[i+y].toUpperCase()}</div>`;
+                        y-=1;
+                    }
+                }
+            }
+
+            document.getElementsByClassName("albumName")[0].innerHTML = albumTitle;
+            document.getElementsByClassName("artist")[0].children[0].innerHTML = artist;
+            document.getElementsByClassName("release")[0].children[1].innerHTML = releaseDate;
+            document.getElementsByClassName("length")[0].children[1].innerHTML = length;
+
+        }
+        setData();
+        document.getElementById("bars").innerHTML="";
+        for(let i = 0;i<Math.floor(document.getElementsByClassName("poster")[0].getBoundingClientRect().width/100);i++){
+            document.getElementById("bars").innerHTML+="<div class=\"bar\"></div>";
+            document.getElementById("bars").lastChild.style.height=Math.random()*1+0.4+"rem";
+        }
+        setInterval(()=>{
+            for(let i = document.getElementById("bars").children.length-1;i>0;i--){
+                document.getElementById("bars").children[i].style.height=document.getElementById("bars").children[i-1].style.height;
+            }
+            document.getElementById("bars").firstChild.style.height=Math.random()*1+0.4+"rem";
+        },750);
+        window.addEventListener("resize",()=>{
+            document.getElementById("bars").innerHTML="";
+            for(let i = 0;i<Math.floor(document.getElementsByClassName("poster")[0].getBoundingClientRect().width/100);i++){
+                document.getElementById("bars").innerHTML+="<div class=\"bar\"></div>";
+                document.getElementById("bars").lastChild.style.height=Math.random()*1+0.4+"rem";
+            }
+        });
+        const songs = document.getElementsByClassName("songs")[0];
+        const tileAmount = Math.ceil(document.getElementsByClassName("songs")[0].children.length/2);
+        const rem = (window.outerHeight*0.027);
+        const tileHeight = (songs.getBoundingClientRect().height-(1.2*rem))/tileAmount;
+        console.log(tileHeight ,tileAmount);
+        let maxLength = 0;
+        for(element of songs.children){
+            if(element.childNodes[0].length > maxLength){
+                maxLength = element.childNodes[0].length;
+            }
+        }
+        const maxTextWidth = (songs.getBoundingClientRect().width/2)-(maxLength*(rem*0.01))
+        let charHeigth = (maxTextWidth/maxLength)*1.75;
+        console.log(charHeigth);
+        if(charHeigth > tileHeight){
+            charHeigth = tileHeight;
+        }
+        for(element of songs.children){
+            element.style.height = charHeigth + "px";
+            element.style.fontSize = charHeigth + "px";
+        }
+        songs.style.height=songs.children[0].getBoundingClientRect().height*tileAmount + "px";
+        const info = document.getElementsByClassName("bottomInfo")[0];
+        const posterHeight = document.getElementsByClassName("poster")[0].getBoundingClientRect().bottom - (rem*2);
+        const bottomOfInfo = info.getBoundingClientRect().bottom;
+        const margin = posterHeight - bottomOfInfo;
+        info.style.marginTop = margin+ "px";
+    </script>
+</body>
+</html>
