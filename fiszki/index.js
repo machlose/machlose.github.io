@@ -12,7 +12,7 @@ const kapitelVier = [
         { "ger": "der Gemeinschaftsgarten", "pol": "wspólny ogród" },
         { "ger": "Hausverwaltung", "pol": "administracja domu" },
         { "ger": "das Hochhaus", "pol": "wieżowiec" },
-        { "ger": "das Miethaus", "pol": "kamienica czynszowa, dom czynszowy" },
+        { "ger": "das Mietshaus", "pol": "kamienica czynszowa, dom czynszowy" },
         { "ger": "der Neubau", "pol": "nowy budynek, nowe budownictwo" },
         { "ger": "das Reihenhaus", "pol": "dom szeregowy" },
         { "ger": "der Stadtrand", "pol": "przedmieście" },
