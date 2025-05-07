@@ -215,11 +215,15 @@ function create_word_array() {
     if (preferences[0][1]) array = array.concat(kapitelVier[1]);
     if (preferences[0][2]) array = array.concat(kapitelVier[2]);
     if (preferences[0][3]) array = array.concat(kapitelVier[3]);
-    if (preferences[1][0]) array = array.concat(kapitelVierZdania[0]);
-    if (preferences[1][1]) array = array.concat(kapitelVierZdania[1]);
-    if (preferences[1][2]) array = array.concat(kapitelVierZdania[2]);
-    if (preferences[1][3]) array = array.concat(kapitelVierZdania[3]);
-    if (preferences[2]) array = array.concat(porzadkowe);
+    if (preferences[0][4]) array = array.concat(kapitelVier[4]);
+    if (preferences[0][5]) array = array.concat(kapitelVier[5]);
+    if (preferences[0][6]) array = array.concat(kapitelVier[6]);
+    if (preferences[0][7]) array = array.concat(kapitelVier[7]);
+    if (preferences[0][8]) array = array.concat(kapitelVier[8]);
+    if (preferences[0][9]) array = array.concat(kapitelVier[9]);
+    if (preferences[0][10]) array = array.concat(kapitelVier[10]);
+    if (preferences[0][11]) array = array.concat(kapitelVier[11]);
+    if (preferences[0][12]) array = array.concat(kapitelVier[12]);
     return array;
 }
 
@@ -252,19 +256,31 @@ function apply_settings() {
                 preferences[0][3] = true;
                 break;
             case "kzwei1":
-                preferences[1][0] = true;
+                preferences[0][4] = true;
                 break;
             case "kzwei2":
-                preferences[1][1] = true;
+                preferences[0][5] = true;
                 break;
             case "kzwei3":
-                preferences[1][2] = true;
+                preferences[0][6] = true;
                 break;
             case "kzwei4":
-                preferences[1][3] = true;
+                preferences[0][7] = true;
                 break;
             case "prateritum":
-                preferences[2] = true;
+                preferences[0][8] = true;
+                break;
+            case "kzwei5":
+                preferences[0][9] = true;
+                break;
+            case "kzwei6":
+                preferences[0][10] = true;
+                break;
+            case "kzwei7":
+                preferences[0][11] = true;
+                break;
+            case "kzwei8":
+                preferences[0][12] = true;
                 break;
             default:
                 break;
