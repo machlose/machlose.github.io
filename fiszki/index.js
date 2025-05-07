@@ -34,7 +34,7 @@ const kapitelVier = [
     ],
     [
         { "ger": "auspacken", "pol": "rozpakowywać (się)" },
-        { "ger": "beantragen etw.", "pol": "składać wniosek o coś" },
+        { "ger": "beantragen etw.", "pol": "wnioskować coś" },
         { "ger": "einpacken", "pol": "pakować (się)" },
         { "ger": "umziehen", "pol": "przeprowadzać się" }
     ],
