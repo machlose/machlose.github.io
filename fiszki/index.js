@@ -29,7 +29,7 @@ const kapitelVier = [
         { "ger": "der Aushang", "pol": "wywieszka" },
         { "ger": "die Stellenanzeige", "pol": "ogłoszenie o pracę" },
         { "ger": "das Studentenwerk", "pol": "dział spraw studenckich" },
-        { "ger": "das Werbeplatak", "pol": "plakat reklamowy" },
+        { "ger": "das Werbeplakat", "pol": "plakat reklamowy" },
         { "ger": "die Qualität", "pol": "jakość" }
     ],
     [
