@@ -10,7 +10,7 @@ const kapitelVier = [
         { "ger": "die Etage", "pol": "piętro" },
         { "ger": "die Garage", "pol": "garaż" },
         { "ger": "der Gemeinschaftsgarten", "pol": "wspólny ogród" },
-        { "ger": "Hausverwaltung", "pol": "administracja domu" },
+        { "ger": "die Hausverwaltung", "pol": "administracja domu" },
         { "ger": "das Hochhaus", "pol": "wieżowiec" },
         { "ger": "das Mietshaus", "pol": "kamienica czynszowa, dom czynszowy" },
         { "ger": "der Neubau", "pol": "nowy budynek, nowe budownictwo" },
@@ -18,9 +18,10 @@ const kapitelVier = [
         { "ger": "der Stadtrand", "pol": "przedmieście" },
         { "ger": "die Terrasse", "pol": "taras" },
         { "ger": "die Tiefgarage", "pol": "garaż podziemny" },
+        { "ger": "die Treppe", "pol": "schody" },
         { "ger": "der Umzug", "pol": "przeprowadzka" },
         { "ger": "das Mehrfamilienhaus", "pol": "dom wielorodzinny" },
-        { "ger": "das Wohnblock", "pol": "blok mieszkalny" },
+        { "ger": "der Wohnblock", "pol": "blok mieszkalny" },
         { "ger": "das Zweifamilienhaus", "pol": "bliźniak" }
     ],
     [
@@ -28,7 +29,7 @@ const kapitelVier = [
         { "ger": "der Aushang", "pol": "wywieszka" },
         { "ger": "die Stellenanzeige", "pol": "ogłoszenie o pracę" },
         { "ger": "das Studentenwerk", "pol": "dział spraw studenckich" },
-        { "ger": "die Werbetafel", "pol": "plakat reklamowy" },
+        { "ger": "das Werbeplatak", "pol": "plakat reklamowy" },
         { "ger": "die Qualität", "pol": "jakość" }
     ],
     [
