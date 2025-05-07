@@ -339,11 +339,12 @@ function submit() {
     lastInputSpan.textContent = input.value;
     ansDiv.textContent = answer[0];
     expectedSpan.textContent = answer[1];
-    if(answer[0] == answer[1]){
-        ansDiv.style.color = "green";
+    console.log(answer[1],input.value,answer[1] == input.value);
+    if(answer[1] == input.value){
+        lastInputSpan.style.color = "green";
     }
     else{
-        ansDiv.style.color = "red";
+        lastInputSpan.style.color = "white";
     }
     appDiv.classList.add("hidden");
     resultDiv.classList.remove("hidden");
