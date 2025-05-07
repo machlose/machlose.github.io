@@ -69,7 +69,7 @@ const kapitelVier = [
         { "ger": "staubsaugen", "pol": "odkurzać" },
         { "ger": "Staub wischen", "pol": "ścierać kurz" },
         { "ger": "den Tisch abräumen", "pol": "sprzątać ze stołu" },
-        { "ger": "den Boden wischen", "pol": "zmywać podłogę" },
+        { "ger": "den Tisch decken", "pol": "nakrywać do stołu" },
         { "ger": "Wäsche waschen", "pol": "prać (bieliznę), robić pranie" }
     ],
     [
@@ -339,6 +339,12 @@ function submit() {
     lastInputSpan.textContent = input.value;
     ansDiv.textContent = answer[0];
     expectedSpan.textContent = answer[1];
+    if(answer[0] == answer[1]){
+        ansDiv.style.color = "green";
+    }
+    else{
+        ansDiv.style.color = "red";
+    }
     appDiv.classList.add("hidden");
     resultDiv.classList.remove("hidden");
 }
