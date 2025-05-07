@@ -165,7 +165,7 @@
             font-family: system-ui;
             letter-spacing: 0.01rem;
             width: 100%;
-            margin-top: -0.6rem;
+            margin-top: -0.4rem;
             margin-bottom: 0.2rem;
             height: 5.3rem;
         }
@@ -266,7 +266,7 @@
         setData();
         const rem = (window.outerHeight*0.027);
         document.getElementById("bars").innerHTML="";
-        for(let i = 0;i<Math.floor((document.getElementsByClassName("poster")[0].getBoundingClientRect().width/rem)/2);i++){
+        for(let i = 0;i<Math.floor((document.getElementsByClassName("poster")[0].getBoundingClientRect().width/rem)/1.3);i++){
             document.getElementById("bars").innerHTML+="<div class=\"bar\"></div>";
             document.getElementById("bars").lastChild.style.height=Math.random()*1+0.4+"rem";
         }
@@ -278,14 +278,14 @@
         },750);
         window.addEventListener("resize",()=>{
             document.getElementById("bars").innerHTML="";
-            for(let i = 0;i<Math.floor((document.getElementsByClassName("poster")[0].getBoundingClientRect().width/rem)/2);i++){
+            for(let i = 0;i<Math.floor((document.getElementsByClassName("poster")[0].getBoundingClientRect().width/rem)/1.3);i++){
                 document.getElementById("bars").innerHTML+="<div class=\"bar\"></div>";
                 document.getElementById("bars").lastChild.style.height=Math.random()*1+0.4+"rem";
             }
         });
         const songs = document.getElementsByClassName("songs")[0];
         const tileAmount = Math.ceil(document.getElementsByClassName("songs")[0].children.length/2);
-        const tileHeight = (songs.getBoundingClientRect().height-(1.2*rem))/tileAmount;
+        const tileHeight = (songs.getBoundingClientRect().height-(rem*0.5))/tileAmount;
         console.log(tileHeight ,tileAmount);
         let maxLength = 0;
         for(element of songs.children){
@@ -294,7 +294,7 @@
             }
         }
         const maxTextWidth = (songs.getBoundingClientRect().width/2)-(maxLength*(rem*0.01))
-        let charHeigth = ((maxTextWidth/maxLength)*1.75)/rem;
+        let charHeigth = ((maxTextWidth/maxLength)*1.6)/rem;
         console.log(charHeigth);
         if(charHeigth > tileHeight){
             charHeigth = tileHeight;

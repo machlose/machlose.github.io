@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="index.js" defer></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="options" class="hidden">
+            <strong>tryb tlumaczenia</strong>
+            <div class="option">
+                <label for="gerpol">niemiecki => polski</label>
+                <input type="radio" name="transmode" id="gerpol" value="gerpol" checked="checked" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="polger">polski => niemiecki</label>
+                <input type="radio" name="transmode" id="polger" value="polger" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="random">losowy</label>
+                <input type="radio" name="transmode" id="random" value="random" class="opt-input">
+            </div>
+            <strong>opcje zestawu</strong>
+            <div class="option">
+                <label for="k4t1">kapitel 5 temat 1</label>
+                <input type="checkbox" name="k4t1" id="k4t1" value="k4t1" checked="checked" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="k4t2">kapitel 5 temat 2</label>
+                <input type="checkbox" name="k4t2" id="k4t2" value="k4t2" checked="checked" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="k4t3">kapitel 5 temat 3</label>
+                <input type="checkbox" name="k4t3" id="k4t3" value="k4t3" checked="checked" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="k4t4">kapitel 5 temat 4</label>
+                <input type="checkbox" name="k4t4" id="k4t4" value="k4t4" checked="checked" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="kzwei1">kapitel 5 temat 1 zdania</label>
+                <input type="checkbox" name="kzwei1" id="kzwei1" value="kzwei1" checked="checked" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="kzwei2">kapitel 5 temat 2 zdania</label>
+                <input type="checkbox" name="kzwei2" id="kzwei2" value="kzwei2" checked="checked" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="kzwei3">kapitel 5 temat 3 zdania</label>
+                <input type="checkbox" name="kzwei3" id="kzwei3" value="kzwei3" checked="checked" class="opt-input">
+            </div>
+            <div class="option">
+                <label for="kzwei4">kapitel 5 temat 4 zdania</label>
+                <input type="checkbox" name="kzwei4" id="kzwei4" value="kzwei4" checked="checked" class="opt-input">
+            </div>
+            <button id="optionsok">ok</button>
+            <button id="clear">reset opcji</button>
+        </div>
+        <div id="app">
+            <label for="input" id="to-translate">Kliknij przycisk aby wylosowac ok?</label>
+            <div>
+<!--                <button id="tenadole">te na dole</button>-->
+                <button id="opcje">opcje</button>
+                <input id="input" type="text">
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+        <div id="result" class="hidden">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" id="ans"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>wpisales:</td>
+                        <td>
+                            <span id="last-input"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>odpowiedz:</td>
+                        <td>
+                            <span id="output"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="ok">Ok</button>
+        </div>
+        <div id="te-na-dole" class="hidden">
+            <hr>
+            <div>
+                <strong>vorhaben - zamierzac</strong>
+                <p>
+                    Ich habe vor, + zu + czasownik w bezokoliczniku + reszta zdania.
+                </p>
+                <p>
+                    ich habe vor (ja zamierzam)
+                </p>
+                <p>
+                    du hast vor (ty zamierzasz)
+                </p>
+                <p>
+                    er/sie/es hat vor (on/ona/ono ma zamiar)
+                </p>
+                <p>
+                    wir haben vor (my zamierzamy)
+                </p>
+                <p>
+                    ihr habt vor (wy zamierzacie)
+                </p>
+                <p>
+                    sie/Sie haben vor (oni/one/Państwo zamierzają)
+                </p>
+            </div>
+            <hr>
+            <div>
+                <strong>ich habe die Absicht - mam zamiar</strong>
+                <p>
+                    Ich habe die Absicht, + zu + czasownik w bezokoliczniku + reszta zdania.
+                </p>
+                <p>
+                    ich habe die Absicht (ja mam zamiar)
+                </p>
+                <p>
+                    du hast die Absicht (ty masz zamiar)
+                </p>
+                <p>
+                    er/sie/es hat die Absicht (on/ona/ono ma zamiar)
+                </p>
+                <p>
+                    wir haben die Absicht (my mamy zamiar)
+                </p>
+                <p>
+                    ihr habt die Absicht (wy macie zamiar)
+                </p>
+                <p>
+                    sie/Sie haben die Absicht (oni/one/Państwo mają zamiar)
+                </p>
+            </div>
+            <hr>
+            <div>
+                <strong>imperativ tryb rozkazujacy</strong>
+                <p>
+                    Prośbę, polecenie lub rozkaz zawsze zaczniesz od czasownika w czasie teraźniejszym.
+                </p>
+                <p>
+                    W zależności do kogo się zwracasz, ten czasownik będzie się trochę różnił.
+                </p>
+                <p>
+                    Jeśli zwracasz się do jednej osoby i jesteś z nią na “ty” z odmienionego czasownika
+                </p>
+                <p>
+                    odcinasz końcówkę “-st” i pomijasz zaimek “du”:
+                </p>
+                <p>
+                    Du gibst mir die Schlüssel. <strong>Tryb rozkazujący:</strong> Gib (st) (du) mir die Schlüssel!
+                </p>
+                <p>
+                    Du machst eine Pause. <strong>Tryb rozkazujący:</strong> Mach (st) (du) eine Pause!
+                </p>
+                <p>
+                    Du isst viel Obst. <strong>Tryb rozkazujący:</strong> Iss (st) (du) viel Obst!
+                </p>
+                <p>
+                    Du nimmst deine Medikamente. <strong>Tryb rozkazujący:</strong> Nimm (st) (du) deine Medikamente!
+                </p>
+            </div>
+            <hr>
+            <div>
+                <strong>odmiana czasownika möchte (musiec)</strong>
+                <table>
+                    <tr>
+                        <th>Osoba</th>
+                        <th>Czasownik</th>
+                    </tr>
+                    <tr>
+                        <td>ich</td>
+                        <td>möchte</td>
+                    </tr>
+                    <tr>
+                        <td>du</td>
+                        <td>möchtest</td>
+                    </tr>
+                    <tr>
+                        <td>er/sie/es</td>
+                        <td>möchte</td>
+                    </tr>
+                    <tr>
+                        <td>wir</td>
+                        <td>möchten</td>
+                    </tr>
+                    <tr>
+                        <td>ihr</td>
+                        <td>möchtet</td>
+                    </tr>
+                    <tr>
+                        <td>sie/Sie</td>
+                        <td>möchten</td>
+                    </tr>
+                </table>
+                <p>
+                    przyklady zdan:
+                </p>
+                <p>
+                    Ich möchte ein Buch lesen. (Chciałbym przeczytać książkę.)
+                </p>
+                <p>
+                    Ich möchte essen. (Chciałbym jeść.)
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
