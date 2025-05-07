@@ -6,19 +6,19 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    font-size: 3vw;
+    font-size: 4vw;
 }
 tbody {
     font-weight: 500;
 }
 @media (min-width: 1000px) {
     body {
-        font-size: 1vw;
+        font-size: 2.5vw;
     }
 }
 #result table {
     font-weight: bold;
-    font-size: 200%;
+    font-size: 100%;
 }
 html {
     display: flex;
@@ -45,11 +45,12 @@ hr {
     display: none !important;
 }
 #ok {
-    font-size: 500%;
+    font-size: 300%;
     font-weight: bold;
     padding: 10px;
 }
 #options {
+    font-size: 30%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

@@ -34,7 +34,7 @@ const kapitelVier = [
     ],
     [
         { "ger": "auspacken", "pol": "rozpakowywać (się)" },
-        { "ger": "beantragen", "pol": "składać wniosek o coś" },
+        { "ger": "beantragen etw.", "pol": "składać wniosek o coś" },
         { "ger": "einpacken", "pol": "pakować (się)" },
         { "ger": "umziehen", "pol": "przeprowadzać się" }
     ],
@@ -209,6 +209,8 @@ const optionsDiv = document.getElementById("options");
 const ansDiv = document.getElementById("ans");
 
 let mode = 0;
+let order = false;
+let orderCounter = 0;
 
 function create_word_array() {
     let array = [];
@@ -243,6 +245,12 @@ function apply_settings() {
                 break;
             case "random":
                 mode = 2;
+                break;
+            case "orderRandom":
+                order = false;
+                break;
+            case "orderOrdered":
+                order = true;
                 break;
             case "k4t1":
                 preferences[0][0] = true;
@@ -311,9 +319,20 @@ function rng(min, max) {
 }
 
 function draw_word() {
-    let randomIndex = rng(0, availableWords.length);
-    let word = availableWords[randomIndex];
-    availableWords.splice(randomIndex, 1);
+    let word = "";
+    if(order == false){
+        let randomIndex = rng(0, availableWords.length);
+        word = availableWords[randomIndex];
+        availableWords.splice(randomIndex, 1);
+    }
+    else{
+        availableWords = create_word_array();
+        word = availableWords[orderCounter]
+        orderCounter += 1;
+        if(orderCounter == availableWords.length){
+            orderCounter = 0;
+        }
+    }
     let t = word.ger;
     let a = word.pol;
     if (word.pra) {
