@@ -1,6 +1,6 @@
 const kapitelVier = [
     [
-        { "ger": "der Altbau", "pol": "ten stary budynek" },
+        { "ger": "der Altbau", "pol": "stary budynek" },
         { "ger": "der Aufzug", "pol": "winda" },
         { "ger": "der Balkon", "pol": "balkon" },
         { "ger": "das Bauernhaus", "pol": "dom na wsi" },
