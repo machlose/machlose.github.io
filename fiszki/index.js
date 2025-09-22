@@ -187,6 +187,102 @@ const porzadkowe = [
     {"ger": "neunzehnte", "pol": "dziewiętnasty"},
     {"ger": "zwanzigste", "pol": "dwudziesty"}
 ]
+const words = {
+  "Uczenie się - 3.1":[
+    {"ger": "auswendig lernen", "pol": "uczyć się na pamięć"},
+    {"ger": "sein Bestes geben", "pol": "dać z siebie wszystko, bardzo się starać"},
+    {"ger": "bewusst", "pol": "świadomie"},
+    {"ger": "einen Blackout haben", "pol": "mieć lukę w pamięci"},
+    {"ger": "die Blockade lösen", "pol": "usunąć blokadę"},
+    {"ger": "einplanen", "pol": "uwzględniać w planie"},
+    {"ger": "das Gehirn", "pol": "mózg"},
+    {"ger": "die Karteikarte", "pol": "fiszka"},
+    {"ger": "sich konzentrieren auf + Akk.", "pol": "koncentrować się (na czymś)"},
+    {"ger": "die Kreativität stimulieren", "pol": "pobudzać wyobraźnię"},
+    {"ger": "leicht lernen", "pol": "uczyć się łatwo"},
+    {"ger": "der Lernstoff", "pol": "materiał nauczania"},
+    {"ger": "sich motivieren", "pol": "motywować (sobie) coś zrobić"},
+    {"ger": "sich Mühe geben", "pol": "starać się"},
+    {"ger": "eine mündliche Prüfung", "pol": "egzamin ustny"},
+    {"ger": "die schriftliche Prüfung", "pol": "egzamin pisemny"},
+    {"ger": "das Prüfungsergebnis bekommen", "pol": "otrzymać wynik egzaminu"},
+    {"ger": "die Prüfung bestehen", "pol": "zdać (zaliczyć) egzamin"},
+    {"ger": "bei der Prüfung durchfallen", "pol": "nie zdać egzaminu, oblać egzamin (pot.)"},
+    {"ger": "im Tandem lernen", "pol": "uczyć się w tandemie"},
+    {"ger": "die Visualisierung", "pol": "wizualizacja"},
+    {"ger": "das Zeitmanagement", "pol": "zarządzanie czasem"}
+  ],
+  "Stres - 3.1":[
+    {"ger": "Angst haben", "pol": "bać się"},
+    {"ger": "aufgeregt / gestresst sein", "pol": "być zdenerwowanym / zestresowanym"},
+    {"ger": "unter Druck stehen", "pol": "być pod presją"},
+    {"ger": "unter Leistungsdruck stehen", "pol": "ulegać presji sukcesu"},
+    {"ger": "effektiv", "pol": "efektywny, wydajny"},
+    {"ger": "sich entspannen", "pol": "odprężać się"},
+    {"ger": "konzentriert sein", "pol": "być skoncentrowanym"},
+    {"ger": "eine Runde joggen", "pol": "przebiec okrążenie"},
+    {"ger": "den Stress bewältigen", "pol": "przezwyciężać / pokonywać stres"},
+    {"ger": "Stress haben", "pol": "być zestresowanym"},
+    {"ger": "Stress verursachen", "pol": "powodować stres"},
+    {"ger": "stressen", "pol": "stresować (kogoś)"},
+    {"ger": "stressig sein", "pol": "być stresującym"},
+    {"ger": "Yoga machen", "pol": "uprawiać jogę"}
+  ],
+  "Rzeczowniki - 3.2":[
+    {"ger": "die Aufnahmeprüfung", "pol": "egzamin wstępny"},
+    {"ger": "die Kindheit", "pol": "dzieciństwo"},
+    {"ger": "die Leidenschaft", "pol": "pasja"},
+    {"ger": "die Leistung", "pol": "osiągnięcie"},
+    {"ger": "die Literaturübersetzerin", "pol": "tłumaczka literatury"},
+    {"ger": "die Privatunterricht", "pol": "lekcja prywatna"},
+    {"ger": "die Rückkehr", "pol": "powrót"},
+    {"ger": "das Schluszeugnis", "pol": "świadectwo szkolne"},
+    {"ger": "die Schulnote", "pol": "ocena szkolna"},
+    {"ger": "die Schultüte", "pol": "tuba ze słodyczami"},
+    {"ger": "der Schulkamerad", "pol": "kolega szkolny"},
+    {"ger": "der Schülerwettbewerb", "pol": "konkurs szkolny"},
+    {"ger": "die Universität", "pol": "uniwersytet"},
+    {"ger": "die Vereinigten Staaten", "pol": "Stany Zjednoczone"},
+  ],
+  "Przymiotniki - 3.2":[
+    {"ger": "bestanden", "pol": "zaliczony"},
+    {"ger": "nicht bestanden", "pol": "niezaliczony"},
+    {"ger": "enttäuscht", "pol": "rozczarowany"},
+    {"ger": "egal", "pol": "obojętny"},
+    {"ger": "engagiert", "pol": "zaangażowany"},
+    {"ger": "objektiv", "pol": "obiektywny"},
+    {"ger": "unnötig", "pol": "niepotrzebny"}
+
+  ],
+   "Rzeczowniki - 3.3":[
+    {"ger": "der Auftritt", "pol": "występ"},
+    {"ger": "die Arbeitsgemeinschaft", "pol": "koło zainteresowań"},
+    {"ger": "die Grenze", "pol": "granica"},
+    {"ger": "die Klassenarbeit", "pol": "klasówka"},
+    {"ger": "das Konzert", "pol": "koncert"},
+    {"ger": "das Musical", "pol": "musical"},
+    {"ger": "die Partnerschaft", "pol": "partnerstwo"},
+    {"ger": "das Schulfest", "pol": "festyn szkolny"},
+    {"ger": "das Schüleraustausch", "pol": "wymiana międzynarodowa"},
+    {"ger": "das Schulorchester", "pol": "orkiestra szkolna"},
+  ],
+  "Zwroty - 3.3":[
+    {"ger": "einen Vortrag halten", "pol": "mieć wykład"},
+    {"ger": "gewinnen gegen", "pol": "wygrać z (kimś)"},
+    {"ger": "eine Pantomime aufführen", "pol": "przedstawiać (np. teatr)"},
+    {"ger": "der Chor", "pol": "chór"},
+    {"ger": "das Publikum", "pol": "publiczność"},
+    {"ger": "der Sänger", "pol": "piosenkarz"},
+    {"ger": "auf dem Programm stehen", "pol": "być w repertuarze"},
+    {"ger": "aufführen", "pol": "wystawiać"},
+    {"ger": "erfolgreich", "pol": "odnoszący sukcesy"},
+    {"ger": "eifrig rechnen", "pol": "pilnie liczyć"},
+    {"ger": "siegen", "pol": "zwyciężać"},
+    {"ger": "überraschen", "pol": "zaskakiwać"},
+    {"ger": "vorbei sein", "pol": "(prze)minąć"}
+  ]
+}
+
 
 let preferences = [false, false, false];
 let availableWords = create_word_array(true, true, true);
@@ -214,25 +310,34 @@ let orderCounter = 0;
 
 function create_word_array() {
     let array = [];
-    if (preferences[0][0]) array = array.concat(kapitelVier[0]);
-    if (preferences[0][1]) array = array.concat(kapitelVier[1]);
-    if (preferences[0][2]) array = array.concat(kapitelVier[2]);
-    if (preferences[0][3]) array = array.concat(kapitelVier[3]);
-    if (preferences[0][4]) array = array.concat(kapitelVier[4]);
-    if (preferences[0][5]) array = array.concat(kapitelVier[5]);
-    if (preferences[0][6]) array = array.concat(kapitelVier[6]);
-    if (preferences[0][7]) array = array.concat(kapitelVier[7]);
-    if (preferences[0][8]) array = array.concat(kapitelVier[8]);
-    if (preferences[0][9]) array = array.concat(kapitelVier[9]);
-    if (preferences[0][10]) array = array.concat(kapitelVier[10]);
-    if (preferences[0][11]) array = array.concat(kapitelVier[11]);
-    if (preferences[0][12]) array = array.concat(kapitelVier[12]);
+    preferences[0].forEach(e=>{
+        array = array.concat(words[e]);
+    })
     return array;
 }
 
+function createOption(string){
+    const options = document.querySelector(".options");
+
+    const option = document.createElement("div");
+        option.classList.add("option");
+    const label = document.createElement("label");
+        label.for = string;
+        label.textContent = string;
+    const input = document.createElement("input");
+        input.type = "checkbox";
+        input.name = string;
+        input.value = string;
+        input.id = string;
+        input.classList.add("opt-input");
+    option.appendChild(label);
+    option.appendChild(input);
+
+    options.appendChild(option);
+}
 function apply_settings() {
     let ok = document.querySelectorAll(".option input:checked");
-    preferences[0] = Array();
+    preferences[0] = [];
     preferences[1] = Array();
     preferences[2] = false;
     ok.forEach(e => {
@@ -252,46 +357,8 @@ function apply_settings() {
             case "orderOrdered":
                 order = true;
                 break;
-            case "k4t1":
-                preferences[0][0] = true;
-                break;
-            case "k4t2":
-                preferences[0][1] = true;
-                break;
-            case "k4t3":
-                preferences[0][2] = true;
-                break;
-            case "k4t4":
-                preferences[0][3] = true;
-                break;
-            case "kzwei1":
-                preferences[0][4] = true;
-                break;
-            case "kzwei2":
-                preferences[0][5] = true;
-                break;
-            case "kzwei3":
-                preferences[0][6] = true;
-                break;
-            case "kzwei4":
-                preferences[0][7] = true;
-                break;
-            case "prateritum":
-                preferences[0][8] = true;
-                break;
-            case "kzwei5":
-                preferences[0][9] = true;
-                break;
-            case "kzwei6":
-                preferences[0][10] = true;
-                break;
-            case "kzwei7":
-                preferences[0][11] = true;
-                break;
-            case "kzwei8":
-                preferences[0][12] = true;
-                break;
             default:
+                preferences[0].push(e.id);
                 break;
         }
     });
@@ -312,6 +379,9 @@ function apply_settings() {
         }
     }
     apply_settings();
+    words.forEach(e => {
+        console.log(e);
+    });
 }
 
 function rng(min, max) {
