@@ -284,7 +284,7 @@ const words = {
 }
 
 
-let preferences = [false, false, false];
+let preferences = [[], false, false];
 let availableWords = create_word_array(true, true, true);
 let answer;
 
@@ -310,6 +310,7 @@ let orderCounter = 0;
 
 function create_word_array() {
     let array = [];
+    console.log(preferences[0]);
     preferences[0].forEach(e=>{
         array = array.concat(words[e]);
     })
@@ -317,7 +318,8 @@ function create_word_array() {
 }
 
 function createOption(string){
-    const options = document.querySelector(".options");
+    
+    const options = document.getElementById("options");
 
     const option = document.createElement("div");
         option.classList.add("option");
@@ -329,11 +331,13 @@ function createOption(string){
         input.name = string;
         input.value = string;
         input.id = string;
+        input.checked = true;
         input.classList.add("opt-input");
+
     option.appendChild(label);
     option.appendChild(input);
 
-    options.appendChild(option);
+    options.insertBefore(option, options.querySelector("button#optionsok"));
 }
 function apply_settings() {
     let ok = document.querySelectorAll(".option input:checked");
@@ -366,6 +370,10 @@ function apply_settings() {
 }
 
 {
+    Object.keys(words).forEach(e => {
+        createOption(e);
+    });
+
     let opts = JSON.parse(localStorage.getItem("options"));
     if (opts !== undefined && opts !== null) {
         for (let i = 0; i < opts.length; i++) {
@@ -379,9 +387,6 @@ function apply_settings() {
         }
     }
     apply_settings();
-    words.forEach(e => {
-        console.log(e);
-    });
 }
 
 function rng(min, max) {
