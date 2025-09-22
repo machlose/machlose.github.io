@@ -266,9 +266,7 @@ const words = {
   "Zwroty - 3.3":[
     {"ger": "einen Vortrag halten", "pol": "mieć wykład"},
     {"ger": "gewinnen gegen", "pol": "wygrać z (kimś)"},
-    {"ger": "eine Pantomime aufführen", "pol": "przedstawiać pantomimę"},
     {"ger": "proben", "pol": "odbywać próbę; ćwiczyć"},
-    {"ger": "auf dem Programm stehen", "pol": "być w repertuarze"},
     {"ger": "eifrig rechnen", "pol": "pilnie liczyć"},
     {"ger": "siegen", "pol": "zwyciężać"},
     {"ger": "überraschen", "pol": "zaskakiwać"},
