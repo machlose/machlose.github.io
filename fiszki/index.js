@@ -211,7 +211,6 @@ const words = {
     {"ger": "das Prüfungsergebnis bekommen", "pol": "otrzymać wynik egzaminu"},
     {"ger": "die Prüfung bestehen", "pol": "zdać (zaliczyć) egzamin"},
     {"ger": "bei der Prüfung durchfallen", "pol": "nie zdać egzaminu, oblać egzamin (pot.)"},
-    {"ger": "im Tandem lernen", "pol": "uczyć się w tandemie"},
     {"ger": "die Visualisierung", "pol": "wizualizacja"},
     {"ger": "das Zeitmanagement", "pol": "zarządzanie czasem"}
   ],
@@ -236,7 +235,6 @@ const words = {
     {"ger": "die Kindheit", "pol": "dzieciństwo"},
     {"ger": "die Leidenschaft", "pol": "pasja"},
     {"ger": "die Leistung", "pol": "osiągnięcie"},
-    {"ger": "die Literaturübersetzerin", "pol": "tłumaczka literatury pięknej"},
     {"ger": "die Privatunterricht", "pol": "lekcja prywatna"},
     {"ger": "die Rückkehr", "pol": "powrót"},
     {"ger": "die Schulnote", "pol": "ocena szkolna"},
